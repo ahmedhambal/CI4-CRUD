@@ -8,6 +8,6 @@ CI4 CRUD adalah source code program CRUD (Create, Read, Update, Delete) yg mengg
 
 - Clone repo or download
 - Create database and impor file pos_db.sql.zip from 'db' folder
-- Setting database on app/config/Database.php
+- Setting database on app/config/Database.php or env file
 - Open terminal/cmd at folder CI4-CRUD and type 'php spark serve'
 - And go url address from your local server => http://localhost:8080/product
