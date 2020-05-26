@@ -2,7 +2,14 @@
 
 ## What is CI4 CRUD?
 
-CI4 CRUD adalah source code program CRUD (Create, Read, Update, Delete) yg menggunakan framework Codeigniter 4.
+CI4 CRUD is source code program CRUD (Create, Read, Update, Delete) that uses framework Codeigniter 4. Let's clone it.
+
+## Changelog
+
+See changelog from the last version.
+The last version is v1.1
+The feature is CRUD with form validation.
+Check [this](https://github.com/ahmedhambal/CI4-CRUD/releases/tag/v1.1)!
 
 ## How to use?
 
@@ -10,4 +17,4 @@ CI4 CRUD adalah source code program CRUD (Create, Read, Update, Delete) yg mengg
 - Create database and impor file pos_db.sql.zip from 'db' folder
 - Setting database on app/config/Database.php or env file
 - Open terminal/cmd at folder CI4-CRUD and type 'php spark serve'
-- And go url address from your local server => http://localhost:8080/product
+- And go url address from your local server => http://localhost:8080/productFV
