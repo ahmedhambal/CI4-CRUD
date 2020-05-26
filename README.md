@@ -13,7 +13,7 @@ Check [this](https://github.com/ahmedhambal/CI4-CRUD/releases/tag/v1.1)!
 
 ## How to use?
 
-- Clone repo or download
+- Clone repo or download on branch master
 - Create database and impor file pos_db.sql.zip from 'db' folder
 - Setting database on app/config/Database.php or env file
 - Open terminal/cmd at folder CI4-CRUD and type 'php spark serve'
