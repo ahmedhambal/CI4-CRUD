@@ -11,11 +11,11 @@ class Product extends Controller
     {
         $model = new Product_model();
         $data['product'] = $model->getProduct();
-        echo view('product_view', $data);
+        echo view('Product/product_view', $data);
     }
     public function add_new()
     {
-        echo view('add_product_view');
+        echo view('Product/add_product_view');
     }
 
     public function save()
@@ -33,7 +33,7 @@ class Product extends Controller
     {
         $model = new Product_model();
         $data['product'] = $model->getProduct($id)->getRow();
-        echo view('edit_product_view', $data);
+        echo view('Product/edit_product_view', $data);
     }
 
     public function update()
