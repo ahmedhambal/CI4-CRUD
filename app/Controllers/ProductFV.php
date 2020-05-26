@@ -20,13 +20,26 @@ class ProductFV extends Controller
 
     public function save()
     {
-        $model = new Product_model();
-        $data = array(
-            'product_name'  => $this->request->getPost('product_name'),
-            'product_price' => $this->request->getPost('product_price'),
-        );
-        $model->saveProduct($data);
-        return redirect()->to('/productFV');
+        helper(['form', 'url']);
+
+        $val = $this->validate([
+            'product_name' => 'required',
+            'product_price' => 'required',
+        ]);
+
+        if (!$val) {
+            echo view('ProductFV/add_product_view', [
+                'validation' => $this->validator
+            ]);
+        } else {
+            $model = new Product_model();
+            $data = array(
+                'product_name'  => $this->request->getPost('product_name'),
+                'product_price' => $this->request->getPost('product_price'),
+            );
+            $model->saveProduct($data);
+            return redirect()->to('/productFV');
+        }
     }
 
     public function edit($id)
@@ -38,14 +51,29 @@ class ProductFV extends Controller
 
     public function update()
     {
+        helper(['form', 'url']);
+
         $model = new Product_model();
         $id = $this->request->getPost('product_id');
-        $data = array(
-            'product_name'  => $this->request->getPost('product_name'),
-            'product_price' => $this->request->getPost('product_price'),
-        );
-        $model->updateProduct($data, $id);
-        return redirect()->to('/productFV');
+
+        $val = $this->validate([
+            'product_name' => 'required',
+            'product_price' => 'required',
+        ]);
+
+        $dataById['product'] = $data['product'] = $model->getProduct($id)->getRow();
+        $dataById['validation'] = $this->validator;
+
+        if (!$val) {
+            echo view('ProductFV/edit_product_view', $dataById);
+        } else {
+            $data = array(
+                'product_name'  => $this->request->getPost('product_name'),
+                'product_price' => $this->request->getPost('product_price'),
+            );
+            $model->updateProduct($data, $id);
+            return redirect()->to('/productFV');
+        }
     }
 
     public function delete($id)

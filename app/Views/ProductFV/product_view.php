@@ -10,7 +10,7 @@
 
 <body>
     <p>Page rendered in {elapsed_time} seconds</p>
-    <a href="/product/add_new">Add New</a>
+    <a href="/productFV/add_new">Add New</a>
     <table>
         <thead>
             <tr>
