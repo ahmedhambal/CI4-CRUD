@@ -264,10 +264,8 @@
         <h1>Feature of this application</h1>
 
         <p><a href="<?= site_url('product') ?>">Bacic CRUD</a></p>
-
-        <p><a href="<?= site_url('productFV') ?>">Basic CRUD with Form Validation</a></p>
-
-
+        <p><a href="<?= site_url('productFV') ?>">Basic CRUD with Form Validation (FV)</a></p>
+        <p><a href="<?= site_url('productFVB') ?>">Bacic CRUD with Bootstrap v4.5 + FV</a></p>
 
     </section>
 
