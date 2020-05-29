@@ -10,19 +10,32 @@
 </head>
 
 <body>
-    <?= isset($validation) ? $validation->listErrors() : ''; ?>
-    <form action="/productFVB/update" method="post">
-        <div class="form-group">
-            <label>Product Name</label>
-            <input type="text" class="form-control" name="product_name" value="<?= $product->product_name; ?>">
+    <?= view('ProductFVB/navbar') ?>
+    <div class="container-fluid">
+        <div class="card shadow-sm">
+            <div class="card-header">
+                Edit Product
+            </div>
+            <div class="card-body">
+                <?= isset($validation) ? $validation->listErrors() : ''; ?>
+                <form action="/productFVB/update" method="post">
+                    <div class="form-group">
+                        <label>Product Name</label>
+                        <input type="text" class="form-control" name="product_name" value="<?= $product->product_name; ?>">
+                    </div>
+                    <div class="form-group">
+                        <label>Product Price</label>
+                        <input type="number" class="form-control" name="product_price" value="<?= $product->product_price; ?>">
+                    </div>
+                    <input type="hidden" name="product_id" value="<?= $product->product_id; ?>">
+                    <button type="submit" class="btn btn-primary">Update</button>
+                </form>
+            </div>
+            <div class="card-footer">
+                Page rendered in {elapsed_time} seconds
+            </div>
         </div>
-        <div class="form-group">
-            <label>Product Price</label>
-            <input type="number" class="form-control" name="product_price" value="<?= $product->product_price; ?>">
-        </div>
-        <input type="hidden" name="product_id" value="<?= $product->product_id; ?>">
-        <button type="submit" class="btn btn-primary">Update</button>
-    </form>
+    </div>
 
     <?= view('assets/jquery.html') ?>
     <?= view('assets/popper.html') ?>
