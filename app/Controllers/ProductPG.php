@@ -9,9 +9,16 @@ class ProductPG extends Controller
 {
     public function index()
     {
+        $pager = \Config\Services::pager();
         $model = new Product_model();
-        $data['product'] = $model->getProduct();
-        echo view('ProductPG/product_view', $data);
+
+        $data = [
+            'users' => $model->paginate(5, 'bootstrap'),
+            'pager' => $model->pager,
+            'product' => $model->getProduct()
+        ];
+
+        return view('ProductPG/product_view', $data);
     }
     public function add_new()
     {
