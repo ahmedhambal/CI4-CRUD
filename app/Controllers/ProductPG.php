@@ -13,9 +13,8 @@ class ProductPG extends Controller
         $model = new Product_model();
 
         $data = [
-            'users' => $model->paginate(5, 'bootstrap'),
-            'pager' => $model->pager,
-            'product' => $model->getProduct()
+            'product' => $model->paginate(5, 'bootstrap'),
+            'pager' => $model->pager
         ];
 
         return view('ProductPG/product_view', $data);
