@@ -7,9 +7,9 @@ CI4 CRUD is source code program CRUD (Create, Read, Update, Delete) that uses fr
 ## Changelog
 
 See changelog from the last version.
-The last version is v1.2
-The feature is CRUD with Bootstrap v4.5.
-Check [this](https://github.com/ahmedhambal/CI4-CRUD/releases/tag/v1.2)!
+The last version is v1.3
+The feature is CRUD with pagination.
+Check [this](https://github.com/ahmedhambal/CI4-CRUD/releases/tag/v1.3)!
 
 ## How to use?
 
@@ -17,4 +17,4 @@ Check [this](https://github.com/ahmedhambal/CI4-CRUD/releases/tag/v1.2)!
 - Create database and impor file pos_db.sql.zip from 'db' folder
 - Setting database on app/config/Database.php or env file
 - Open terminal/cmd at folder CI4-CRUD and type 'php spark serve'
-- And go url address from your local server => http://localhost:8080/productFVB
+- And go url address from your local server => http://localhost:8080/productPG
