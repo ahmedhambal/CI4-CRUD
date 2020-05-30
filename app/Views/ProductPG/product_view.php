@@ -40,6 +40,7 @@
                         <?php endforeach; ?>
                     </tbody>
                 </table>
+                <?php echo $pager->links('bootstrap', 'bootstrap_pagination') ?>
             </div>
             <div class="card-footer text-center text-muted">
                 Page rendered in {elapsed_time} seconds
