@@ -12,8 +12,16 @@ class ProductPG extends Controller
         $pager = \Config\Services::pager();
         $model = new Product_model();
 
+        /** filter */
+        $like       = [];
+
+        $request = \Config\Services::request();
+        if ($request->getPost('submit')) {
+            $like   = ['product.product_name' => $request->getPost('keyword')];
+        }
+
         $data = [
-            'product' => $model->paginate(5, 'bootstrap'),
+            'product' => $model->like($like)->paginate(10, 'bootstrap'),
             'pager' => $model->pager
         ];
 

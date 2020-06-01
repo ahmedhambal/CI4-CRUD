@@ -18,7 +18,21 @@
                 Product
             </div>
             <div class="card-body">
-                <a href="/productPG/add_new" class="btn btn-primary mb-3">Add New</a>
+                <div class="row">
+                    <div class="col-xl-8 col-lg-7">
+                        <a href="/productPG/add_new" class="btn btn-primary mb-3">Add New</a>
+                    </div>
+                    <div class="col-xl-4 col-lg-5">
+                        <form action="/productPG" method="post">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Search keyword ... " name="keyword" autocomplete="off" autofocus>
+                                <div class="input-group-append">
+                                    <input class="btn btn-outline-secondary" type="submit" name="submit">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
                 <table class="table table-bordered table-hover">
                     <thead>
                         <tr>
