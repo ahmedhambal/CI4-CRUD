@@ -16,8 +16,8 @@ class ProductPG extends Controller
         $like       = [];
 
         $request = \Config\Services::request();
-        if ($request->getPost('submit')) {
-            $like   = ['product.product_name' => $request->getPost('keyword')];
+        if ($request->getGet('submit')) {
+            $like   = ['product.product_name' => $request->getGet('keyword')];
         }
 
         $data = [

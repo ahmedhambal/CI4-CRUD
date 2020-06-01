@@ -23,7 +23,7 @@
                         <a href="/productPG/add_new" class="btn btn-primary mb-3">Add New</a>
                     </div>
                     <div class="col-xl-4 col-lg-5">
-                        <form action="/productPG" method="post">
+                        <form action="/productPG" method="get">
                             <div class="input-group mb-3">
                                 <input type="text" class="form-control" placeholder="Search keyword ... " name="keyword" autocomplete="off" autofocus>
                                 <div class="input-group-append">
