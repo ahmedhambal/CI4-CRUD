@@ -7,9 +7,9 @@ CI4 CRUD is source code program CRUD (Create, Read, Update, Delete) that uses fr
 ## Changelog
 
 See changelog from the last version.
-The last version is v1.3
-The feature is CRUD with pagination.
-Check [this](https://github.com/ahmedhambal/CI4-CRUD/releases/tag/v1.3)!
+The last version is v1.4
+The feature is CRUD with searching.
+Check [this](https://github.com/ahmedhambal/CI4-CRUD/releases/tag/v1.4)!
 
 ## How to use?
 
