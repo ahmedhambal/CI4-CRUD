@@ -13,7 +13,7 @@
     <?= view('ProductPG/navbar') ?>
 
     <div class="container-fluid">
-        <div class="card shadow-sm">
+        <div class="card bg-light shadow-sm">
             <div class="card-header">
                 Product
             </div>
@@ -23,18 +23,6 @@
                         <?php if (!empty(session()->getFlashdata('success'))) : ?>
                             <div class="alert alert-success">
                                 <?php echo session()->getFlashdata('success'); ?>
-                            </div>
-                        <?php endif ?>
-
-                        <?php if (!empty(session()->getFlashdata('info'))) : ?>
-                            <div class="alert alert-info">
-                                <?php echo session()->getFlashdata('info'); ?>
-                            </div>
-                        <?php endif ?>
-
-                        <?php if (!empty(session()->getFlashdata('warning'))) : ?>
-                            <div class="alert alert-warning">
-                                <?php echo session()->getFlashdata('warning'); ?>
                             </div>
                         <?php endif ?>
 
@@ -70,7 +58,7 @@
                                 <td><?= $row['product_price']; ?></td>
                                 <td>
                                     <a href="/productPG/edit/<?= $row['product_id']; ?>">Edit</a>
-                                    <a href="/productPG/delete/<?= $row['product_id']; ?>">Delete</a>
+                                    <a href="/productPG/delete/<?= $row['product_id']; ?>" onclick="return confirm('Are you sure?')">Delete</a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>

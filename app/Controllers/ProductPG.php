@@ -97,6 +97,7 @@ class ProductPG extends Controller
     {
         $model = new Product_model();
         $model->deleteProduct($id);
+        session()->setFlashdata('success', 'Delete data successfully');
         return redirect()->to('/productPG');
     }
 }
