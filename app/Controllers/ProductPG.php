@@ -21,7 +21,7 @@ class ProductPG extends Controller
         }
 
         $data = [
-            'product' => $model->like($like)->paginate(10, 'bootstrap'),
+            'product' => $model->like($like)->paginate(10, 'product'),
             'pager' => $model->pager
         ];
 
