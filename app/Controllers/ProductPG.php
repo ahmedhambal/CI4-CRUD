@@ -53,7 +53,7 @@ class ProductPG extends Controller
                 'product_price' => $this->request->getPost('product_price'),
             );
             $model->saveProduct($data);
-            session()->setFlashdata('success', 'Created Product successfully');
+            session()->setFlashdata('success', 'Created data successfully');
             return redirect()->to('/productPG');
         }
     }
@@ -88,6 +88,7 @@ class ProductPG extends Controller
                 'product_price' => $this->request->getPost('product_price'),
             );
             $model->updateProduct($data, $id);
+            session()->setFlashdata('success', 'Update data successfully');
             return redirect()->to('/productPG');
         }
     }

@@ -20,12 +20,24 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col-12">
-                        <?php
-                        if (!empty(session()->getFlashdata('success'))) { ?>
+                        <?php if (!empty(session()->getFlashdata('success'))) : ?>
                             <div class="alert alert-success">
                                 <?php echo session()->getFlashdata('success'); ?>
                             </div>
-                        <?php } ?>
+                        <?php endif ?>
+
+                        <?php if (!empty(session()->getFlashdata('info'))) : ?>
+                            <div class="alert alert-info">
+                                <?php echo session()->getFlashdata('info'); ?>
+                            </div>
+                        <?php endif ?>
+
+                        <?php if (!empty(session()->getFlashdata('warning'))) : ?>
+                            <div class="alert alert-warning">
+                                <?php echo session()->getFlashdata('warning'); ?>
+                            </div>
+                        <?php endif ?>
+
                     </div>
                 </div>
                 <div class="row">
@@ -43,7 +55,7 @@
                         </form>
                     </div>
                 </div>
-                <table class="table table-bordered table-hover">
+                <table class="table table-bordered table-hover table-sm">
                     <thead>
                         <tr>
                             <th>Name</th>
