@@ -19,6 +19,16 @@
             </div>
             <div class="card-body">
                 <div class="row">
+                    <div class="col-12">
+                        <?php
+                        if (!empty(session()->getFlashdata('success'))) { ?>
+                            <div class="alert alert-success">
+                                <?php echo session()->getFlashdata('success'); ?>
+                            </div>
+                        <?php } ?>
+                    </div>
+                </div>
+                <div class="row">
                     <div class="col-xl-8 col-lg-7">
                         <a href="/productPG/add_new" class="btn btn-primary mb-3">Add New</a>
                     </div>

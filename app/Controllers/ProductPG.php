@@ -52,6 +52,7 @@ class ProductPG extends Controller
                 'product_price' => $this->request->getPost('product_price'),
             );
             $model->saveProduct($data);
+            session()->setFlashdata('success', 'Created Product successfully');
             return redirect()->to('/productPG');
         }
     }
