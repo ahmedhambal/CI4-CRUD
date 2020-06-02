@@ -22,7 +22,7 @@ class ProductPG extends Controller
         }
 
         $data = [
-            'product' => $model->like($like)->orderBy($order)->paginate(10, 'bootstrap'),
+            'product' => $model->like($like)->orderBy($order)->paginate(10, 'product'),
             'pager' => $model->pager
         ];
 
