@@ -13,7 +13,8 @@ class ProductPG extends Controller
         $model = new Product_model();
 
         /** filter */
-        $like       = [];
+        $like = [];
+        $order = 'product_id DESC';
 
         $request = \Config\Services::request();
         if ($request->getGet('submit')) {
@@ -21,7 +22,7 @@ class ProductPG extends Controller
         }
 
         $data = [
-            'product' => $model->like($like)->paginate(10, 'product'),
+            'product' => $model->like($like)->orderBy($order)->paginate(10, 'product'),
             'pager' => $model->pager
         ];
 
